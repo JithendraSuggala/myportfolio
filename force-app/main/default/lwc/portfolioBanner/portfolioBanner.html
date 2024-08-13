@@ -1,0 +1,30 @@
+<template>
+    <div class="Banner">
+        <!--Image-->
+        <img src={userPic} alt="Profile Pic" class="profilePic" />
+        <!--Name-->
+        <div class="name">{fullName}</div>
+        <!--Designation-->
+        <div class="Designation">{designation} at {companyName}</div>
+        <!--Location-->
+        <div class="Location">{companyLocation}</div>
+        <!--Social media links-->
+        <div>
+            <template if:true={linkedinUrl}>
+                <a href={linkedinUrl} target="_blank">
+                    <img src={linkedin} alt="Linkedin Logo" class="social-icon" />
+                </a>
+            </template>
+            <template if:true={trailheadUrl}>
+                <a href={trailheadUrl} target="_blank">
+                    <img src={trailhead} alt="Trailhead Logo" class="social-icon" />
+                </a>
+            </template>
+            <template if:true={githubUrl}>
+                <a href={githubUrl} target="_blank">
+                    <img src={github} alt="Git Hub Logo" class="social-icon" />
+                </a>
+            </template>
+        </div>
+    </div>
+</template>
