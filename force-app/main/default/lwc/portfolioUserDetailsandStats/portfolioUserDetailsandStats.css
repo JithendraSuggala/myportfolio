@@ -2,3 +2,8 @@
     background: #242c37;
     padding: 16px;
 }
+@media (max-width:720px) {
+    .wrapper {
+        text-align: center;
+    }
+}

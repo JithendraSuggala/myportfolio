@@ -12,3 +12,8 @@ p {
 img{
     height: 100px;
 }
+@media (max-width:720px) {
+    img {
+        margin: 16px;
+    }
+}
