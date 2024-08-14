@@ -2,11 +2,16 @@
     <div class="wrapper">
         <lightning-layout multiple-rows>
             <lightning-layout-item size="12">
+                <template if:true={recordId}>
                     <c-portfolio-user-details record-id={recordId} object-api-name={objectApiName}
-                    class="slds-p-around_small"></c-portfolio-user-details>
+                        resume-url={resumeUrl} class="slds-p-around_small"></c-portfolio-user-details>
+                </template>
             </lightning-layout-item>
             <lightning-layout-item size="12">
-                    User Stats
+                <template if:true={rank}>
+                    <c-portfolio-user-stats badges={badges} points={points} trails={trails}
+                        rank={rank}></c-portfolio-user-stats>
+                </template>
             </lightning-layout-item>
         </lightning-layout>
     </div>

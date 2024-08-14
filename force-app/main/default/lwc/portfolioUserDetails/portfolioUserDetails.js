@@ -4,7 +4,9 @@ export default class PortfolioUserDetails extends LightningElement {
 
     @api recordId
     @api objectApiName
+    @api resumeUrl
     downloadResume(){
-        window.open('https://github.com/JithendraSuggala/Resume/raw/main/JithendraResume.pdf','_blank');
+        window.open(this.resumeUrl,'_blank');
+        //https://github.com/JithendraSuggala/Resume/raw/main/JithendraResume.pdf
     }
 }
