@@ -2,7 +2,11 @@
     <div>
         <lightning-tabset variant="scoped">
         <lightning-tab label="Summary">
-            Summary Content !
+            <template if:true={recordId}>
+            <c-portfolio-summary 
+            record-id={recordId}
+            object-api-name={objectApiName} ></c-portfolio-summary>
+            </template>
         </lightning-tab>
         <lightning-tab label="Personal Projects">
             Personal Projects !
