@@ -15,8 +15,9 @@
                 </template>
             </lightning-tab>
             <lightning-tab label="Skills ">
-                Skills Content !
-                Work in Progress....
+               <template if:true={recordId}>
+                <c-portfolio-skills record-id={recordId}></c-portfolio-skills>
+               </template>
             </lightning-tab>
             <lightning-tab label="Education">
                 Education Content !

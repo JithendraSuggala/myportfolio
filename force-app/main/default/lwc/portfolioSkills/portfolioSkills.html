@@ -1,0 +1,14 @@
+<template>
+   <h2 class="slds-text-heading_medium">Technical Skills</h2>
+   <template for:each={techSkills} for:item="tech">
+   <lightning-badge key={tech} label={tech} class="slds-badge_inverse slds-badge"></lightning-badge>
+   </template>
+   <h2 class="slds-text-heading_medium">Soft Skills</h2>
+   <template for:each={softSkills} for:item="skill">
+   <lightning-badge key={skill} label={skill} class="slds-badge_inverse slds-badge"></lightning-badge>
+   </template>
+   <h2 class="slds-text-heading_medium">Tools and softwares</h2>
+   <template for:each={tools} for:item="tool">
+   <lightning-badge key={tool} label={tool} class="slds-badge_inverse slds-badge"></lightning-badge>
+   </template>
+</template>
