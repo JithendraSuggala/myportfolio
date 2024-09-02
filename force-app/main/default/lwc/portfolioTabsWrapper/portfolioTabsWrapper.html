@@ -20,8 +20,9 @@
                </template>
             </lightning-tab>
             <lightning-tab label="Education">
-                Education Content !
-                Work in Progress....
+                <template if:true={recordId}>
+                <c-portfolio-education record-id={recordId}></c-portfolio-education>
+               </template>
             </lightning-tab>
             <lightning-tab label="Certifications">
                 Certifications Content !
