@@ -1,8 +1,8 @@
 import { LightningElement, wire, api } from 'lwc';
 import { getRelatedListRecords } from 'lightning/uiRelatedListApi';
 const COLUMNS = [
-    { label: 'Education', fieldName: 'Education' },
-    { label: 'Institution', fieldName: 'Institution' },
+    { label: 'Education', fieldName: 'Education',wrapText: true },
+    { label: 'Institution', fieldName: 'Institution',wrapText: true },
     { label: 'Passing Year', fieldName: 'YearOfPassing' },
     { label: 'CGPA/Marks', fieldName: 'grade' }
 ];
