@@ -25,13 +25,16 @@
                </template>
             </lightning-tab>
             <lightning-tab label="Certifications">
-                Certifications Content !
-                Work in Progress....
+                <template if:true={recordId}>
+                    <c-portfolio-certifications record-id={recordId}></c-portfolio-certifications>
+                </template>
             </lightning-tab>
+            <template if:true={show}>
             <lightning-tab label="Other Details">
                 Other Details
                 Work in Progress....
             </lightning-tab>
+            </template>
         </lightning-tabset>
     </div>
 </template>
