@@ -23,7 +23,7 @@ export default class PortfolioEducation extends LightningElement {
             this.formatEducation(data)
         }
         if(error){
-          //  console.error("Error Message :"+error);
+          //  console.error("Error Message :"+error)
         }
     }
     formatEducation(data){

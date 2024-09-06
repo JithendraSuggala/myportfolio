@@ -14,7 +14,7 @@ export default class PortfolioSkills extends LightningElement {
     fields:[Tech_skills,soft_skills,Software_tools]
 })skillHandler({data,error}){
     if(data){
-        console.log("data: "+JSON.stringify(data))
+        /*console.log("data: "+JSON.stringify(data))*/
         this.formatSkills(data)
     }
     else{
@@ -27,7 +27,7 @@ formatSkills(data){
     this.softSkills= SoftSkills__c ? SoftSkills__c.value.split(','):[]
     this.tools=SoftwareTools__c ? SoftwareTools__c.value.split(','):[]
 
-    console.log('Tech Skills Array'+this.techSkills)
+    /*console.log('Tech Skills Array'+this.techSkills)*/
 }
 
 }

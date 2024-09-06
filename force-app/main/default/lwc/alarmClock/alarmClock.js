@@ -84,9 +84,9 @@ export default class AlarmClock extends LightningElement {
         else if (label === "AM/PM") {
             this.selectedmeridian = value
         }
-        console.log("this.selectedHours" + this.selectedHours)
-        console.log("this.selectedminutes" + this.selectedminutes)
-        console.log("this.selectedmeridian" + this.selectedmeridian)
+        //console.log("this.selectedHours" + this.selectedHours)
+        //console.log("this.selectedminutes" + this.selectedminutes)
+        //console.log("this.selectedmeridian" + this.selectedmeridian)
 
     }
     setAlarmhandler() {

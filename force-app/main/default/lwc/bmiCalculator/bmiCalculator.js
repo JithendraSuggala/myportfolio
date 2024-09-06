@@ -17,8 +17,8 @@ export default class BmiCalculator extends LightningElement {
     }
     handleSubmit(event) {
         event.preventDefault();
-        console.log("Height:" + this.height);
-        console.log("weight:" + this.weight);
+        //console.log("Height:" + this.height);
+        //console.log("weight:" + this.weight);
         this.calculateBMI();
     }
     calculateBMI() {
@@ -28,7 +28,7 @@ export default class BmiCalculator extends LightningElement {
         let height = Number(this.height) / 100;
         let weight = Number(this.weight);
         let BMI = weight / (height * height);
-        console.log("BMI is" + BMI);
+        //console.log("BMI is" + BMI);
         this.bmiValue = Number(BMI.toFixed(2));
 
         if (this.bmiValue < 18.5) {
@@ -43,8 +43,8 @@ export default class BmiCalculator extends LightningElement {
         else {
             this.result = 'Obese'
         }
-        console.log("BMI is:" + this.bmiValue);
-        console.log("Result is:" + this.result);
+        //console.log("BMI is:" + this.bmiValue);
+        //console.log("Result is:" + this.result);
     }
     reCalculate() {
         this.height = ''

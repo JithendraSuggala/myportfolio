@@ -14,11 +14,11 @@ export default class PortfolioCertifications extends LightningElement {
         fields:[salesforceCerts,otherCerts]
     })certificationHandler({data,error}){
         if(data){
-            console.log("Data Contains :"+JSON.stringify(data))
+            //console.log("Data Contains :"+JSON.stringify(data))
             this.formatCerts(data)
         }
         else{
-            console.error("Error Message :"+error);
+            console.error("Error Message :"+error)
         }
     }
     formatCerts(data){

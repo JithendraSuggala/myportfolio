@@ -19,7 +19,7 @@ export default class PortfolioWorkExperience extends LightningElement {
 
     })workExperienceHandler({data,error}){
         if(data){
-            console.log("Work Experience Data"+JSON.stringify(data));
+            /*console.log("Work Experience Data"+JSON.stringify(data))*/
             this.formatContent(data);
         }
         if(error){
@@ -41,7 +41,7 @@ export default class PortfolioWorkExperience extends LightningElement {
 
                 return {id,Role,WorkLocation,JobStartDate,JobEndDate,CompanyName,StillWorkingHere,Description}
         })
-        console.log("workExperienceList"+JSON.stringify(this.workExperienceList));
+        /*console.log("workExperienceList"+JSON.stringify(this.workExperienceList))*/
     }
     getValue(data){
             return data && (data.displayValue || data.value);

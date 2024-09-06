@@ -30,10 +30,10 @@ async convert(){
         debugger;
         //console.log(jsondata)
         this.result = (Number(this.amount) * jsondata.conversion_rate).toFixed(2)  
-        console.log("Output:- "+this.result)
+        //console.log("Output:- "+this.result)
     }
     catch(error){
-        console.log(error)
+        //console.log(error)
       this.error="An error occurred. Please try again..."
     }
 }

@@ -28,7 +28,7 @@ export default class PortfolioUserStats extends LightningElement {
             } else {
                 clearInterval(this.intervalId);
             }
-        }, 1); // 50 PointCountbers will increase every milli sec
+        }, 1); // 50 numbers will increase every milli sec
     }
     badgesIncrement() {
         this.badgeCount = 0; // Reset to 0
@@ -38,7 +38,7 @@ export default class PortfolioUserStats extends LightningElement {
             } else {
                 clearInterval(this.intervalId);
             }
-        }, 60); // 1 number will increase every 60milli sec
+        }, 100); // 1 number will increase every 100milli sec
     }
     trailsIncrement() {
         this.trailCount = 0; // Reset to 0
@@ -48,7 +48,7 @@ export default class PortfolioUserStats extends LightningElement {
             } else {
                 clearInterval(this.intervalId);
             }
-        }, 150); // 1 number will increase every 100milli sec
+        }, 200); // 1 number will increase every 200milli sec
     }
 
 }
