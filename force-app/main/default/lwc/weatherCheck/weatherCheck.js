@@ -1,5 +1,5 @@
 import { LightningElement } from 'lwc';
-const API_KEY='0115b6bc0198dcbddba5c6b98015c0c8'
+import API_KEY from '@salesforce/label/WeatherCheckAPIKEY'
 import Weather_ICONS from '@salesforce/resourceUrl/weatherAppIcons'
 import getWeatherDetails from '@salesforce/apex/WeatherCheckController.getWeatherDetails'
 export default class WeatherCheck extends LightningElement {
@@ -37,7 +37,7 @@ export default class WeatherCheck extends LightningElement {
     }
     /*
     async fetchData(){
-        const API_KEY='0115b6bc0198dcbddba5c6b98015c0c8'
+        
         const API_URL=`https://api.openweathermap.org/data/2.5/weather?q=${this.cityName}&units=metric&appid=${API_KEY}`
         
         try{
