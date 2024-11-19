@@ -35,8 +35,8 @@ submitHandler(event){
     this.convert()
 }
 async convert(){
-    const API_KEY = 'af3dd25477a1c15aa979a101'
-    const API_URL=`https://v6.exchangerate-api.com/v6/${API_KEY}/pair/${this.countryFrom}/${this.countryTo}` 
+    
+    const API_URL=`https://v6.exchangerate-api.com/v6/${this.API_KEY}/pair/${this.countryFrom}/${this.countryTo}` 
     try{
         const data = await fetch(API_URL)
         const jsondata = await data.json()
