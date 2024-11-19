@@ -1,5 +1,5 @@
-import { LightningElement } from 'lwc';
-const API_KEY='0115b6bc0198dcbddba5c6b98015c0c8'
+import { LightningElement, wire } from 'lwc';
+import WeatherAPI_KEY from '@salesforce/apex/WeatherCheckController.returnWeatherAPIKey'
 import Weather_ICONS from '@salesforce/resourceUrl/weatherAppIcons'
 import getWeatherDetails from '@salesforce/apex/WeatherCheckController.getWeatherDetails'
 export default class WeatherCheck extends LightningElement {
@@ -15,7 +15,18 @@ export default class WeatherCheck extends LightningElement {
     thermometerIcon = Weather_ICONS+'/weatherAppIcons/thermometer.svg'
     arrowBackIcon = Weather_ICONS+'/weatherAppIcons/arrow-back.svg'
 
-    
+    API_Key=''
+
+    @wire(WeatherAPI_KEY)
+    getWeatherAPIKey({data,error}){
+        if(data){
+            this.API_Key=data
+        }
+        else{
+            console.log(error);
+            
+        }
+    }
    
     cityName
     jsondata
@@ -37,8 +48,8 @@ export default class WeatherCheck extends LightningElement {
     }
     /*
     async fetchData(){
-        const API_KEY='0115b6bc0198dcbddba5c6b98015c0c8'
-        const API_URL=`https://api.openweathermap.org/data/2.5/weather?q=${this.cityName}&units=metric&appid=${API_KEY}`
+        
+        const API_URL=`https://api.openweathermap.org/data/2.5/weather?q=${this.cityName}&units=metric&appid=${this.API_Key}`
         
         try{
             const data = await fetch(API_URL)
@@ -62,7 +73,7 @@ export default class WeatherCheck extends LightningElement {
                 this.isError=true
                 this.loadingText='Something Went Wrong'
             })
-        /*const API_URL=`https://api.openweathermap.org/data/2.5/weather?q=${this.cityName}&units=metric&appid=${API_KEY}`
+        /*const API_URL=`https://api.openweathermap.org/data/2.5/weather?q=${this.cityName}&units=metric&appid=${this.API_KEY}`
             fetch(API_URL).then(res=>res.json()).then(result=>{
                 console.log(result)
                 //console.log(JSON.stringify(result))
