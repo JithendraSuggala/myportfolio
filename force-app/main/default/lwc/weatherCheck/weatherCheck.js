@@ -49,7 +49,11 @@ export default class WeatherCheck extends LightningElement {
     /*
     async fetchData(){
         
+<<<<<<< HEAD
         const API_URL=`https://api.openweathermap.org/data/2.5/weather?q=${this.cityName}&units=metric&appid=${this.API_Key}`
+=======
+        const API_URL=`https://api.openweathermap.org/data/2.5/weather?q=${this.cityName}&units=metric&appid=${API_KEY}`
+>>>>>>> 138a29876b56fda53a4ea6ee3528253ce390b6de
         
         try{
             const data = await fetch(API_URL)
